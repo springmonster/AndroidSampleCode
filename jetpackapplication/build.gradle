@@ -50,8 +50,8 @@ dependencies {
     kapt "androidx.lifecycle:lifecycle-compiler:2.0.0"
 
     // room
-    implementation 'android.arch.persistence.room:runtime:1.1.1'
-    kapt 'android.arch.persistence.room:compiler:1.1.1'
+    implementation 'androidx.room:room-runtime:2.0.0-beta01'
+    kapt 'androidx.room:room-compiler:2.0.0-beta01'
 
     // coroutines
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.0'

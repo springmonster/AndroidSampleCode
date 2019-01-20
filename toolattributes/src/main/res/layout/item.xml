@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+                name="item"
+                type="com.toolattributes.Item"/>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            tools:context=".MainActivity">
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/item_img"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:srcCompat="@mipmap/ic_launcher"
+                tools:ignore="ContentDescription"
+                tools:srcCompat="@tools:sample/avatars"/>
+
+        <TextView
+                android:id="@+id/item_first_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:gravity="start"
+                android:text="@{item.firstName}"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintRight_toRightOf="@id/item_barrier"
+                tools:text="@tools:sample/first_names"
+                app:layout_constraintBottom_toTopOf="@id/item_full_name_tv"
+                app:layout_constraintLeft_toRightOf="@id/item_img"
+                app:layout_constraintTop_toTopOf="@id/item_img"/>
+
+        <TextView
+                android:id="@+id/item_full_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="@{item.fullName}"
+                tools:text="@tools:sample/full_names"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintRight_toRightOf="@id/item_barrier"
+                app:layout_constraintLeft_toLeftOf="@id/item_first_name_tv"
+                app:layout_constraintTop_toBottomOf="@id/item_first_name_tv"
+                app:layout_constraintBottom_toTopOf="@id/item_last_birthday_tv"/>
+
+        <TextView
+                android:id="@+id/item_last_birthday_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="@tools:sample/date/ddmmyy"
+                android:gravity="start"
+                android:text="@{item.birthday}"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintRight_toRightOf="@id/item_barrier"
+                app:layout_constraintLeft_toLeftOf="@id/item_first_name_tv"
+                app:layout_constraintTop_toBottomOf="@id/item_full_name_tv"
+                app:layout_constraintBottom_toBottomOf="@id/item_img"/>
+
+        <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/item_barrier"
+                android:layout_height="0dp"
+                app:barrierDirection="right"
+                app:constraint_referenced_ids="item_first_name_tv,item_full_name_tv,item_last_birthday_tv"
+                android:layout_width="0dp"/>
+
+        <TextView
+                android:id="@+id/item_last_address_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@{item.address}"
+                tools:text="@tools:sample/cities[0]"
+                app:layout_constraintLeft_toRightOf="@id/item_barrier"
+                app:layout_constraintTop_toTopOf="@id/item_img"
+                app:layout_constraintBottom_toBottomOf="@id/item_img"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

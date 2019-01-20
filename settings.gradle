@@ -1,1 +1,1 @@
-include ':app', ':jetpackapplication', ':mocksunflower', ':constraintlayoutexamples'
+include ':app', ':jetpackapplication', ':mocksunflower', ':constraintlayoutexamples', ':toolattributes'

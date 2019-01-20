@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/constraintlayoutexamples" />
             <option value="$PROJECT_DIR$/jetpackapplication" />
             <option value="$PROJECT_DIR$/mocksunflower" />
+            <option value="$PROJECT_DIR$/toolattributes" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
