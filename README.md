@@ -1,4 +1,7 @@
 ## ConstraintLayoutDemo (constraintlayoutexamples项目)
+#### TODO
+* placeholder
+* max, min
 ## JetPackDemo (jetpackapplication项目)
 #### Done
 * DataBinding
@@ -33,3 +36,5 @@
 * Navigation的覆盖back按键事件？？？
 * Navigation的跳转API有几种？？？
 * 用了DataBinding之后可以在View的代码层级（不是xml）不去手写R.layout，这样有什么规律，优点缺点是什么？？？
+## tool attribute (toolattributes项目)
+* [Android Tool Attributes](https://developer.android.com/studio/write/tool-attributes)

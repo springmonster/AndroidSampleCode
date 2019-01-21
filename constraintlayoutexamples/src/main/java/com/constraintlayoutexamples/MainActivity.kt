@@ -23,6 +23,8 @@ class MainActivity : AppCompatActivity() {
             add(RvViewEntity("Guide", R.layout.layout_2))
             add(RvViewEntity("Barrier", R.layout.layout_3))
             add(RvViewEntity("ConstraintSet", Int.MAX_VALUE))
+            add(RvViewEntity("Margin", R.layout.layout_4))
+            add(RvViewEntity("Group", R.layout.layout_5))
         }
         val adapter = RvAdapter()
         adapter.setOnRvItemClick(object : RvAdapter.OnRvItemClick {
