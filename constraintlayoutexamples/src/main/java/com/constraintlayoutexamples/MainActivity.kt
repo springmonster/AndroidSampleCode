@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
             add(RvViewEntity("Margin", R.layout.layout_4))
             add(RvViewEntity("Group", R.layout.layout_5))
             add(RvViewEntity("PlaceHolder", R.layout.layout_6))
+            add(RvViewEntity("PlaceHolder2", R.layout.layout_7))
         }
         val adapter = RvAdapter()
         adapter.setOnRvItemClick(object : RvAdapter.OnRvItemClick {
