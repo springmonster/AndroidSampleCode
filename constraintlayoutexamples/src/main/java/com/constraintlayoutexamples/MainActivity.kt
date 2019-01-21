@@ -2,9 +2,12 @@ package com.constraintlayoutexamples
 
 import android.content.Intent
 import android.os.Bundle
+import android.transition.TransitionManager
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.layout_6.*
 
 class MainActivity : AppCompatActivity() {
     var isMainLayout = true
@@ -25,6 +28,7 @@ class MainActivity : AppCompatActivity() {
             add(RvViewEntity("ConstraintSet", Int.MAX_VALUE))
             add(RvViewEntity("Margin", R.layout.layout_4))
             add(RvViewEntity("Group", R.layout.layout_5))
+            add(RvViewEntity("PlaceHolder", R.layout.layout_6))
         }
         val adapter = RvAdapter()
         adapter.setOnRvItemClick(object : RvAdapter.OnRvItemClick {
@@ -53,5 +57,10 @@ class MainActivity : AppCompatActivity() {
         } else {
             super.onBackPressed()
         }
+    }
+
+    fun swipeView(view: View) {
+        TransitionManager.beginDelayedTransition(layout_6_cl)
+        placeholder.setContentId(view.id)
     }
 }
