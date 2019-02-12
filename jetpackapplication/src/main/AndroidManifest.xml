@@ -19,6 +19,14 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+        <activity android:name=".singleliveevent.NormalDetailActivity">
+        </activity>
+        <activity android:name=".singleliveevent.NormalActivity">
+        </activity>
+        <activity android:name=".singleliveevent.SingleLiveEventDetailActivity">
+        </activity>
+        <activity android:name=".singleliveevent.SingleLiveEventActivity">
+        </activity>
         <activity android:name=".navigation.MainActivity">
         </activity>
         <activity

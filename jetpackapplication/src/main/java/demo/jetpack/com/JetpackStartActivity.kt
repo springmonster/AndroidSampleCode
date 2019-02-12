@@ -5,7 +5,6 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
-import demo.jetpack.com.R.id.activity_jetpack_start_rv
 import demo.jetpack.com.binding.BindingSimpleActivity
 import demo.jetpack.com.databinding.ActivityJetpackStartBinding
 import demo.jetpack.com.downloadmanager.DownloadManagerActivity
@@ -13,6 +12,8 @@ import demo.jetpack.com.lifecycle.LifeCycleActivity
 import demo.jetpack.com.livedata.LiveDataActivity
 import demo.jetpack.com.navigation.MainActivity
 import demo.jetpack.com.room.RoomStartActivity
+import demo.jetpack.com.singleliveevent.NormalActivity
+import demo.jetpack.com.singleliveevent.SingleLiveEventActivity
 import demo.jetpack.com.viewmodel.UserViewModelActivity
 import kotlinx.android.synthetic.main.activity_jetpack_start.*
 
@@ -32,7 +33,9 @@ class JetpackStartActivity : AppCompatActivity() {
             StartEntity("ViewModel", UserViewModelActivity::class.java),
             StartEntity("LifeCycle", LifeCycleActivity::class.java),
             StartEntity("LiveData", LiveDataActivity::class.java),
-            StartEntity("DownloadManager", DownloadManagerActivity::class.java)
+            StartEntity("DownloadManager", DownloadManagerActivity::class.java),
+            StartEntity("Normal", NormalActivity::class.java),
+            StartEntity("SingleLiveEvent", SingleLiveEventActivity::class.java)
         )
         val jetpackStartAdapter = JetpackStartAdapter(this)
         jetpackStartAdapter.addAll(mutableList)
